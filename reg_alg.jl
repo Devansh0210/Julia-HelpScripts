@@ -18,6 +18,8 @@ end
 
 
 Base.://(r1::imp, r2::imp) = imp((r1.r * r2.r)/(r2.r + r1.r))
+Base.://(r1, r2::imp) = imp((r1 * r2.r)/(r2.r + r1))
+Base.://(r1::imp, r2) = imp((r1.r * r2)/(r2 + r1.r))
 
 Base.:+(r1::imp, r2::imp) = imp(r1.r + r2.r)
 Base.:+(r1::imp, r2) = imp(r1.r + r2)
