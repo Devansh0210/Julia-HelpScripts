@@ -1,4 +1,4 @@
-### 1. Resistor algebra
+### 1. Resistor algebra [reg_alg.jl](https://github.com/Devansh0210/Julia-HelpScripts)
 
 define all the resistors using `@res` macro:
 ```julia
