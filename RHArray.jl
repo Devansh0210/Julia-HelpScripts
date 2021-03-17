@@ -15,5 +15,4 @@ function RArray(v::Vector)
 	end
 	return sc
 	# return M
-
 end
