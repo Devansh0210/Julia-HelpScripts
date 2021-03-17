@@ -6,7 +6,7 @@ function RArray(v::Vector)
 	M[2,1:end-(N%2)] = [v[i] for i in 2:2:N]
 	
       for i in 3:N
-		M[i,1:end-1] = [(M[i-1,1]*M[i-2,j+1] - M[i-1,j+1]*M[i-2,j])/M[i-1,1] ==0 ? eps(Float64) : (M[i-1,1]*M[i-2,j+1] - M[i-1,j+1]*M[i-2,j])/M[i-1,1] for j in 						1:xlim-1]
+		M[i,1:end-1] = [(M[i-1,1]*M[i-2,j+1] - M[i-1,j+1]*M[i-2,1])/M[i-1,1] ==0 ? eps(Float64) : (M[i-1,1]*M[i-2,j+1] - M[i-1,j+1]*M[i-2,j])/M[i-1,1] for j in 						1:xlim-1]
 	end
 
 	sc = 0
