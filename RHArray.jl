@@ -7,6 +7,12 @@ function RArray(v::Vector)
 	for i in 3:N
 		M[i,1:end-1] = [(M[i-1,1]*M[i-2,j+1] - M[i-1,j+1]*M[i-2,j])/M[i-1,1] for j in 1:xlim]
 	end
-	
-	return M
+
+	sc = 0
+	for j in 1:(N-1)
+		sc += (M[j,1]*M[j+1,1]<0)
+	end
+	return sc
+	# return M
+      
 end
